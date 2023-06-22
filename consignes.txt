@@ -1,0 +1,22 @@
+1 - créer des composants basiques sur Home et Detail + header +footer
+2 - installer le router sur l'application
+
+3 - remplir les fonctions api (axios) dans le dossier API du coup, mes composants par la suite pourront piocher dans ces fonctions comme une caisse à outil
+
+4 - s'occuper des composants
+Home
+on crée une state pour récupérer la valeur passée dans le champs de formulaire et une state pour stocker touts les films retournés par la fonction ajax
+dans le return
+one crée un champ de formulaire avec un event onChange qui met à jour la state par la valeur du formulaire
+lorsqu'on appuie sur le bouton envoyer ça va déclencher une fonction que vous allez créer dans le composant qui va appeler la fonction ajax qu'on ne doit pas oublier d'importer, cette fonction va récuperer la liste des films
+la réponse de cette fonction on va la stocker dans la state des films
+on aura plus qu'a boucler sur la state dans le return
+et afficher la liste dans des liens Link
+ne pas oublier dans l'url du Link de passer l'id du film en tant que params
+Detail
+on créer une const params qui récup l'objet des params
+on crée une state qui va stocker les infos d'un film et une state qui va stocker les compagnies du film
+au chargement de la page on va appeler la fonction ajax qui recup un film par son id (on oublie pas de l'importer) et on va stocker la réponse dans la state du film
+toujours dans le then de la fonction de recup d'un film
+on va boucler sur les  compagnies et appeler pour chaque tour de boucle la fonction ajax de recupération d'une compagnie par son id
+on met à jour notre state des compagnies
